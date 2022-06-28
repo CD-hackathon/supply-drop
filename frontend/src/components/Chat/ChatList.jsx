@@ -33,7 +33,7 @@ function ChatList({ userId }) {
     return (
         <div>
             {groupMessages.map((groupMessage, index) => (
-                <>
+                <React.Fragment key={index}>
                     <div
                         key={index}
                         onClick={() => {
@@ -58,7 +58,7 @@ function ChatList({ userId }) {
                             embiggenChat={embiggen}
                         />
                     )}
-                </>
+                </React.Fragment>
             ))}
         </div>
     );
